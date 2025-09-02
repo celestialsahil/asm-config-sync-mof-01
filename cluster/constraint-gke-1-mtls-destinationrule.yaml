@@ -12,3 +12,4 @@
 #           - networking.istio.io
 #         kinds:
 #           - DestinationRule
+
