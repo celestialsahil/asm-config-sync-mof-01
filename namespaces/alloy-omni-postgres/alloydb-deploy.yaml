@@ -10,7 +10,7 @@ spec:
         name: db-pw-alloydbomni
     resources:
       cpu: 2
-      memory: 8
+      memory: 8Gi
       disks:
       - name: DataDisk
-        size: "10"
+        size: 10Gi
