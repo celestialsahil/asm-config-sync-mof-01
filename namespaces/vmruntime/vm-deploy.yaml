@@ -59,4 +59,4 @@ spec:
   cloudInit:
     noCloud:
       secretRef:
-        name: user-data
+        name: vm-user-data
