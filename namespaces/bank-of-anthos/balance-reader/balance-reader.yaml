@@ -77,7 +77,7 @@ spec:
             - name: CACHE_SIZE
               value: "1000000"
             - name: JVM_OPTS
-              value: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Xms256m -Xmx512m
+              value: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Xms256m -Xmx256m
             - name: LOG_LEVEL
               value: info
             - name: NAMESPACE
@@ -107,12 +107,12 @@ spec:
             timeoutSeconds: 10
           resources:
             limits:
-              cpu: 500m
-              ephemeral-storage: 0.5Gi
-              memory: 512Mi
+              cpu: 100m
+              ephemeral-storage: 0.25Gi
+              memory: 256Mi
             requests:
               cpu: 100m
-              ephemeral-storage: 0.5Gi
+              ephemeral-storage: 0.25Gi
               memory: 256Mi
           securityContext:
             allowPrivilegeEscalation: false
