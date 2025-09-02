@@ -30,3 +30,4 @@ spec:
       disks:
       - name: DataDisk
         size: 10Gi
+        storageClass: local-shared

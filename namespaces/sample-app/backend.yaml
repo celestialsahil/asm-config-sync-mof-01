@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    app: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: asia-southeast2-docker.pkg.dev/ap-id-poc-mof-gdc/sample-app/tma-backend/backend:v1
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - secretRef:
+                name: db-pw-alloydbomni
+          volumeMounts:
+            - name: backend-src
+              mountPath: /app
+      volumes:
+        - name: backend-src
+          emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+  labels:
+    app: backend
+spec:
+  type: ClusterIP
+  selector:
+    app: backend
+  ports:
+    - port: 8000
+      targetPort: 8000
