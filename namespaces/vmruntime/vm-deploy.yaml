@@ -27,9 +27,9 @@ spec:
   source:
     http:
       url: https://cloud-images.ubuntu.com/releases/noble/release/ubuntu-24.04-server-cloudimg-amd64.img
-status:
-  size: "0"
-  virtualMachineAttachments: null
+# status:
+#   size: "0"
+#   virtualMachineAttachments: null
 ---
 apiVersion: vm.cluster.gke.io/v1
 kind: VirtualMachine
