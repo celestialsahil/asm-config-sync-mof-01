@@ -7,7 +7,7 @@ spec:
   primarySpec:
     adminUser:
       passwordRef:
-        name: db-pw-mof
+        name: db-pw-alloydbomni
     resources:
       cpu: 2
       memory: 8
