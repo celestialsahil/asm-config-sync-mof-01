@@ -17,7 +17,6 @@ apiVersion: vm.cluster.gke.io/v1
 kind: VirtualMachineDisk
 metadata:
   name: vm-runtime-disk-01-boot-dv
-  namespace: default
   creationTimestamp: null
   annotations:
     vm.cluster.gke.io/storage-access-mode: ReadWriteOnce
