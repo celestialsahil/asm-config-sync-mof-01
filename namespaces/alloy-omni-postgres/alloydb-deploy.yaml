@@ -13,4 +13,4 @@ spec:
       memory: 8
       disks:
       - name: DataDisk
-        size: 10
+        size: "10"
