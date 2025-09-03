@@ -21,6 +21,8 @@ metadata:
   name: vm-runtime-01
   labels:
       vm.cluster.gke.io/predefined-machinetype: "true"
+      app: "ubuntu"
+      package: "docker-compose"
 spec:
   osType: Linux #Windows or Linux to enable guestOS features, case sensitive
   compute:
