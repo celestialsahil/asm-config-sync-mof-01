@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: tma-serice
+  name: tma-service
 spec:
   selector:
     kubevirt/vm: vm-runtime-01
@@ -15,17 +15,6 @@ spec:
     protocol: TCP
     port: 8000
     targetPort: 8000
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: vm-runstime-ssh
-spec:
-  selector:
-    kubevirt/vm: vm-runtime-01
-  type: LoadBalancer
-  loadBalancerIP: 10.215.2.22
-  ports:
   - protocol: TCP
     name: ssh
     port: 2222
