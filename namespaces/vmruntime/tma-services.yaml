@@ -34,6 +34,7 @@ spec:
     matchLabels:
       app: "ubuntu"
       package: "docker-compose"
+  externalTrafficPolicy: Local
   type: LoadBalancer
   loadBalancerIP: 10.215.2.22
   ports:
