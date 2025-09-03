@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: tma-serice
   annotations:
-    metallb.io/allow-shared-ip: "vm-runtime-service"
+    metallb.io/allow-shared-ip: vm-runtime-service
 spec:
   selector:
     kubevirt/vm: vm-runtime-01
@@ -25,7 +25,7 @@ kind: Service
 metadata:
   name: vm-runstime-ssh
   annotations:
-    metallb.io/allow-shared-ip: "vm-runtime-service"
+    metallb.io/allow-shared-ip: vm-runtime-service
 spec:
   selector:
     kubevirt/vm: vm-runtime-01
