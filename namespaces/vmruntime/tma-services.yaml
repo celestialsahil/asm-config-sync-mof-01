@@ -30,6 +30,7 @@ spec:
   selector:
     kubevirt/vm: vm-runtime-01
   type: LoadBalancer
+  externalTrafficPolicy:
   loadBalancerIP: 10.215.2.22
   ports:
   - protocol: TCP
